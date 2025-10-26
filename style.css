@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #22d3ee;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #22d3ee;
+    color: #0f172a;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #06b6d4;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 10px;
+    background: #334155;
+    border-radius: 8px;
+}
+
+.team-inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-box {
+    width: 48%;
+    background: #475569;
+    padding: 10px;
+    border-radius: 8px;
+}

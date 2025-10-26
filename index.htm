@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Apostas - Futebol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>⚽ Calculadora de Apostas</h1>
+
+    <div class="container">
+        <div class="team-inputs">
+            <div class="team-box">
+                <h3>Últimos 5 jogos - Time A</h3>
+                <div id="timeA">
+                    <input type="text" placeholder="Ex: 2-1">
+                    <input type="text" placeholder="Ex: 1-0">
+                    <input type="text" placeholder="Ex: 3-2">
+                    <input type="text" placeholder="Ex: 0-1">
+                    <input type="text" placeholder="Ex: 2-2">
+                </div>
+            </div>
+
+            <div class="team-box">
+                <h3>Últimos 5 jogos - Time B</h3>
+                <div id="timeB">
+                    <input type="text" placeholder="Ex: 1-1">
+                    <input type="text" placeholder="Ex: 0-2">
+                    <input type="text" placeholder="Ex: 2-0">
+                    <input type="text" placeholder="Ex: 3-1">
+                    <input type="text" placeholder="Ex: 1-2">
+                </div>
+            </div>
+        </div>
+
+        <div class="team-box" style="margin-top:20px;">
+            <h3>Confrontos Diretos (até 5 últimos)</h3>
+            <div id="h2h">
+                <input type="text" placeholder="Ex: 2-2">
+                <input type="text" placeholder="Ex: 1-0">
+                <input type="text" placeholder="Ex: 3-1">
+                <input type="text" placeholder="Ex: 0-2">
+                <input type="text" placeholder="Ex: 1-1">
+            </div>
+        </div>
+
+        <button onclick="calcular()">Calcular Probabilidades</button>
+
+        <div class="results" id="resultados"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
