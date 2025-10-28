@@ -1,69 +1,188 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: #f1f5f9;
-    padding: 20px;
+:root {
+    --bg: #0d1117;
+    --card: #1b1f2a;
+    --muted: #cfd6e4;
+    --accent: #ff7f50;
+    --accent2: #60e0fa;
+    --glass: rgba(96, 127, 250, 0.03);
 }
 
-h1 {
-    text-align: center;
-    color: #22d3ee;
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #0d1117, #16213e);
+    color: var(--muted);
+    font-family: Inter, Roboto, Arial, sans-serif;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #1e293b;
+    max-width: 1100px;
+    margin: 28px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-label,
-input {
-    display: block;
-    margin-bottom: 10px;
+.hero {
+    text-align: left;
+    margin-bottom: 18px;
 }
 
-input {
-    width: 80px;
-    padding: 5px;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
+.hero h1 {
+    font-size: 24px;
+    margin: 0 0 6px;
+    color: var(--accent2);
 }
 
-button {
-    background: #22d3ee;
-    color: #0f172a;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
+.subtitle {
+    color: var(--muted);
+    margin: 0;
+    font-size: 14px;
 }
 
-button:hover {
-    background: #06b6d4;
+.form-area {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(96, 127, 250, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.results {
-    margin-top: 20px;
-    padding: 10px;
-    background: #334155;
-    border-radius: 8px;
-}
-
-.team-inputs {
+.teams {
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.team-box {
-    width: 48%;
-    background: #475569;
-    padding: 10px;
+.team-card {
+    flex: 1 1 320px;
+    background: var(--glass);
+    padding: 16px;
+    border-radius: 12px;
+    border-top: 4px solid var(--accent2);
+    transition: all 0.3s ease;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--card);
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 127, 80, 0.4);
+}
+
+.controls,
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+button {
+    background: var(--accent2);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #0d1117;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 127, 80, 0.4);
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.results-panel,
+.analysis-panel {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(96, 127, 250, 0.2);
+}
+
+.palpites-list {
+    padding-left: 18px;
+}
+
+.palpite-item {
+    background: linear-gradient(90deg, rgba(255, 127, 80, 0.1), rgba(96, 224, 250, 0.05));
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.palpite-item:hover {
+    background: linear-gradient(90deg, rgba(255, 127, 80, 0.2), rgba(96, 224, 250, 0.1));
+}
+
+.palpite-item small {
+    display: block;
+    color: var(--muted);
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.analysis-text {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.analysis-panel {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#analysisText {
+    flex: 0 0 auto;
+    margin-bottom: 12px;
+    overflow-y: auto;
+}
+
+#probChart {
+    flex: 1 1 auto;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 18px;
+    color: var(--muted);
+}
+
+@media (max-width: 980px) {
+    .results {
+        grid-template-columns: 1fr;
+    }
 }
